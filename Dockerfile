@@ -48,3 +48,6 @@ ENTRYPOINT ["/docker-entrypoint"]
 
 # Expose the listener port
 EXPOSE ${LISTENER_PORT}
+
+# Fix https://github.com/hertzg/rtl_433_docker/issues/101#issuecomment-1850605794
+RUN apk --no-cache add libressl3.8-libssl
